@@ -1,0 +1,73 @@
+<ion-header>
+  <br>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="actualizar()">
+        <ion-icon slot="icon-only" name="refresh"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{ 'aplicacion.favoritos.titulo' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <!-- CARGANDO -->
+  <ion-grid style="height: 100%" *ngIf="loading">
+    <ion-row justify-content-center align-items-center style="height: 100%; flex-direction: column">
+      <ion-spinner name="ios"></ion-spinner>
+      {{ 'aplicacion.favoritos.cargando_favoritos' | translate }}
+    </ion-row>
+  </ion-grid>
+
+  <!-- SI NO CUENTA CON FAVORITOS -->
+  <ion-grid style="height: 100%" *ngIf="!hasFavourites && !loading">
+    <ion-row justify-content-center align-items-center style="height: 100%; flex-direction: column">
+      {{ 'aplicacion.favoritos.sin_favoritos' | translate }}
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-list *ngIf="hasFavourites && !loading">
+
+    <ion-item *ngFor="let favorito of favoritos" text-wrap>
+      <ion-label text-wrap>
+
+        <h2><strong>{{ favorito.establecimiento.nombre }}</strong></h2>
+        <p>{{ favorito.establecimiento.tipoActividad.etiqueta }} </p>
+        <p><strong>{{ favorito.establecimiento.direccion.tipoMunicipio.etiqueta }}</strong> </p>
+        
+        <p>
+          {{ 'aplicacion.favoritos.sobre' | translate }} <!-- SOBRE -->
+          
+          {{ favorito.establecimiento.direccion.tipoVialidadPrincipal.etiqueta }}
+          {{ favorito.establecimiento.direccion.callePrincipal }}
+          
+          {{ 'aplicacion.favoritos.entre' | translate }} <!-- ENTRE -->
+          {{ favorito.establecimiento.direccion.tipoVialidad1.etiqueta }}
+          {{ favorito.establecimiento.direccion.calle1 }}
+
+          {{ 'aplicacion.favoritos.y' | translate }} <!-- Y -->
+
+          {{ favorito.establecimiento.direccion.tipoVialidad2.etiqueta }}
+          {{ favorito.establecimiento.direccion.calle2 }} 
+
+          {{ 'aplicacion.favoritos.numero_exterior' | translate }} <!-- , NUMERO EXTERIOR:  -->
+
+          {{ favorito.establecimiento.direccion.numeroExterior }}
+       
+          {{ 'aplicacion.favoritos.codigo_postal' | translate }} <!-- , CODIGO POSTAL:  -->
+
+          {{ favorito.establecimiento.direccion.codigoPostal }}
+
+        </p>
+        <ion-button type="submit" (click)="quitarFavorito(favorito)" style="width: 48%" round item-end> {{ 'aplicacion.favoritos.boton_quitar' | translate }} </ion-button>
+        <ion-button type="submit" (click)="verFavorito(favorito)" style="width: 48%" round item-end> {{ 'aplicacion.favoritos.boton_ver' | translate }} </ion-button>
+
+      </ion-label>
+
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>

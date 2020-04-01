@@ -1,0 +1,7 @@
+{
+  "name": "tienditas-frontend-app",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

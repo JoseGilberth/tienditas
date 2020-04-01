@@ -1,0 +1,164 @@
+{
+    "aplicacion": {
+        "titulo": "Tienditas",
+        "gps": {
+            "problemas_gps": "Whoops, parece que tienes problemas con el GPS, Intenta mover el marcador manualmente",
+            "validar_gps": "GPS apagado, ¿Deseas abrir las configuraciones de localización?",
+            "errores": {
+                "titulo": "Error en GPS",
+                "valida_disponibilidad_gps": "No se ha podido obtener información del GPS"
+            },
+            "cancelar": "Cancelar",
+            "ok": "Ok"
+        },
+        "util": {},
+        "login": {
+            "o": "o",
+            "registrate": "Regístrate",
+            "correo": "* Correo",
+            "usuario_registro": "* Usuario",
+            "password_registro": "* Contraseña",
+            "repetir_password": "* Repetir Contraseña",
+            "registrarme": "Registrarme",
+            "inicia_sesion": "Inicia Sesión",
+            "usuario": "Usuario o Correo",
+            "password": "Contraseña",
+            "iniciar_sesion": "Iniciar Sesión",
+            "iniciando_sesion": "Iniciando Sesión",
+            "registrando_usuario": "Registrando usuario",
+            "te_enviamos_un_correo" : "Te enviamos un correo",
+            "revisa_tu_bandeja": "Revisa tu bandeja de entrada o spam para activar tu cuenta",
+            "requeridos":{ 
+                "correo" : "El correo es requerido",
+                "usuario" : "El usuario es requerido",
+                "password" : "El password es requerido",
+                "repetir_password" : "Repetir el password es requerido"
+            },
+            "recuperar_cuenta" :{
+                "titulo" : "Recuperar cuenta",
+                "enviado" : "Enviado",
+                "enviando_correo" : "Enviando correo",
+                "instrucciones": "Puedes cambiar tu contraseña por razones de seguridad o restablecerla si la olvidas. Cambiar tu contraseña es fácil, Te enviaremos un enlace por correo electrónico para que puedas restablecer tu contraseña.",
+                "olvide_mi_password" : "Olvide mi contraseña",
+                "recuperar" : "Recuperar",
+                "correo" : "Correo"
+            },
+            "errores": {
+                "error_registro": "Error al registrarse",
+                "error_recuperar_cuenta": "Error al recuperar la cuenta",
+                "error_iniciar_sesion": "Error al iniciar sesión",
+                "error_desconocido": "Error desconocido",
+                "posible_error_conexion": "Posible error de conexión"
+            }
+        },
+        "inicio": {
+            "titulo": "Inicio",
+            "titulo_busqueda": "¿Qué negocio buscas?",
+            "boton_busqueda": "Buscar",
+            "mostrar_mas": "Mostrar mas..",
+            "tipo_actividad": "Tipo de actividad: ",
+            "tipo_negocio": "Tipo de negocio: ",
+            "correo": "Correo: ",
+            "telefono": "Teléfono: ",
+            "reportar_negocio": "Reportar negocio!",
+            "anhadir_favoritos": "Añadir a favoritos!",
+            "buscando": "Buscando, puede tomar unos minutos...",
+            "guardando_negocio": "Añadiendo negocio",
+            "favorito": "Favorito",
+            "exito": "Exito!",
+            "cancelar": "Cancelar",
+            "agregado_a_favoritos": "Establecimiento agregado a favoritos!",
+            "necesitas_indicar_lugar_busqueda": "Necesitas indicar el lugar de búsqueda, usando una posición por default",
+            "reportar_negocio_subtitulo": "¿Que ocurre con este establecimiento ?",
+            "dejanos_un_comentario": "Dejanos un comentario",
+            "no_hay_negocios": "No hay mas tienditas Aqui!, intenta generalizar tu busqueda ",
+            "reporte": "Reporte",
+            "reportando_negocio": "Reportando Negocio",
+            "reportado": "Negocio reportado",
+            "busqueda_manual": {
+                "titulo": "Buscar",
+                "input_busqueda": "Tacos, Ferreterías, Mercados, Gas",
+                "distancia": "Distancia",
+                "500_metros": "500 metros",
+                "600_metros": "600 metros",
+                "700_metros": "700 metros",
+                "800_metros": "800 metros",
+                "900_metros": "900 metros",
+                "mil_metros": "1000 metros",
+                "buscar": "Buscar"
+            },
+            "reporte_modulo": {
+                "titulo": "Reporte",
+                "comentarios": "Comentarios",
+                "enviar": "Enviar Reporte",
+                "error_comentario": "El comentario debe contenor al menos 10 letras y menos de 250",
+                "problema": {
+                    "titulo": "Reporte",
+                    "tipo_actividad_erronea": "Tipo de actividad erronea",
+                    "inexistente": "La tiendita ya no existe",
+                    "posicionamiento_incorrecto": "La tiendita no esta en el lugar indicado",
+                    "otro": "Otro"
+                }
+            },
+            "errores": {
+                "titulo": "Error",
+                "buscar_establecimiento": "Error al buscar el establecimiento",
+                "reportar_establecimiento": "Error al reportar el establecimiento",
+                "favorito_establecimiento": "Error al agregar a favoritos"
+            }
+        },
+        "favoritos": {
+            "titulo": "Favoritos",
+            "subtitulo": "Mis favoritos",
+            "cargando_favoritos": "Cargando favoritos...",
+            "sin_favoritos": "Sin Favoritos",
+            "sobre": "Sobre",
+            "entre": "entre",
+            "y": "y",
+            "numero_exterior": ", Número exterior",
+            "codigo_postal": ", Código postal",
+            "boton_quitar": "Quitar",
+            "boton_ver": "Ver",
+            "eliminar_favorito": "Eliminar favorito",
+            "eliminar_favorito_mensaje": "¿Estás seguro que querer eliminar este establecimiento como favorito? ",
+            "cancelar": "Cancelar",
+            "errores": {
+                "titulo": "Error",
+                "ver_favorito": "Error al ver favoritos",
+                "quitar_favorito": "Error al quitar favorito",
+                "consultar_favoritos": "Error al obtener tus favoritos"
+            }
+        },
+        "cuenta": {
+            "titulo": "Cuenta",
+            "datos_generales": "Datos generales",
+            "datos_de_la_cuenta": "Datos de la cuenta",
+            "nombre": "Nombre:",
+            "primer_apellido": "Primer apellido:",
+            "segundo_apellido": "Segundo apellido:",
+            "password": "Password:",
+            "repetir_password": "Repetir Password:",
+            "correo": "Correo:",
+            "actualizar_datos_cuenta": "Actualizar Datos",
+            "configuraciones": "Configuraciones",
+            "reportes_e_idioma": "Reportes e idioma",
+            "idioma": "Idioma",
+            "espanhol": "Español",
+            "ingles": "Ingles",
+            "numero_establecimientos_a_mostrar": "Número de establecimientos a mostrar",
+            "pattern_numero_e_mostrar": "La cantidad debe ser entre 1 y 100",
+            "mis_reportes": "Mis Reportes",
+            "guardar_configuracion": "Guardar configuración",
+            "datos_guardados": "Datos guardados con éxito",
+            "actualizando_usuario": "Actualizando al usuario",
+            "datos_actualizados": "Datos actualizados con éxito",
+            "recuperando_perfil": "Recuperando datos de la cuenta",
+            "cargando": "Cargando datos de tu cuenta...",
+            "cerrando_sesion": "Cerrando sesión",
+            "datos_no_guardados": "Datos no guardados",
+            "errores": {
+                "titulo": "Error"
+            }
+        }
+    }
+}

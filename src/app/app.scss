@@ -1,0 +1,42 @@
+// App Styles
+// ----------------------------------------------------------------------------
+// Put style rules here that you want to apply to the entire application. These
+// styles are for the entire app and not just one component. Additionally, this
+// file can hold Sass mixins, functions, and placeholder classes to be imported
+// and used throughout the application.
+.titulo-main {
+  background: var(--ion-color-principal);
+  color: var(--ion-color-blanco);
+  margin: 0;
+  padding: 5px 15px;
+  text-align: justify;
+}
+.custom-icon-grey {
+  color: var(--ion-color-gris);
+}
+
+.custom-icon-primary {
+  color: var(--ion-color-principal);
+}
+
+modal-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@media not all and (min-height: 600px) and (min-width: 768px) {
+  ion-modal ion-backdrop {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (min-height: 0px) and (min-width: 0px) {
+  .modal-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="cerrar()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{ 'aplicacion.inicio.busqueda_manual.titulo' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-input #buscar [(ngModel)]="buscarNegocioPorLatLngDTO.busqueda" type="text"
+        placeholder="{{ 'aplicacion.inicio.busqueda_manual.input_busqueda' | translate }}" autofocus></ion-input>
+      <!--ion-searchbar #buscar (ionCancel)="cancelSearch($event)" [showCancelButton]="true" [(ngModel)]="buscarNegocioPorLatLngDTO.busqueda" placeholder="Tacos, Ferreterias, Mercados, Gas"></ion-searchbar-->
+      <ion-icon item-end name="search"></ion-icon>
+    </ion-item>
+
+    <br>
+    <br>
+
+    <ion-item>
+      <ion-label>{{ 'aplicacion.inicio.busqueda_manual.distancia' | translate }}</ion-label>
+      <ion-select interface="popover" [(ngModel)]="buscarNegocioPorLatLngDTO.distancia">
+        <ion-select-option selected [value]="500">{{ 'aplicacion.inicio.busqueda_manual.500_metros' | translate }}</ion-select-option>
+        <ion-select-option [value]="600">{{ 'aplicacion.inicio.busqueda_manual.600_metros' | translate }}</ion-select-option>
+        <ion-select-option [value]="700">{{ 'aplicacion.inicio.busqueda_manual.700_metros' | translate }}</ion-select-option>
+        <ion-select-option [value]="800">{{ 'aplicacion.inicio.busqueda_manual.800_metros' | translate }}</ion-select-option>
+        <ion-select-option [value]="900">{{ 'aplicacion.inicio.busqueda_manual.900_metros' | translate }}</ion-select-option>
+        <ion-select-option [value]="1000">{{ 'aplicacion.inicio.busqueda_manual.mil_metros' | translate }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <br>
+    <br>
+
+    <ion-button icon-search type="submit" (click)="buscarNegocios()" round style="width: 100%" item-end>
+      {{ 'aplicacion.inicio.busqueda_manual.buscar' | translate }}
+    </ion-button>
+
+  </ion-list>
+
+</ion-content>

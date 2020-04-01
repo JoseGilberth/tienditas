@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="cerrar()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{ 'aplicacion.inicio.reporte_modulo.titulo' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label>{{ 'aplicacion.inicio.reporte_modulo.problema.titulo' | translate }}</ion-label>
+    <ion-select [(ngModel)]="solicitudCambio.tipoError">
+      <ion-select-option *ngFor="let tipoError of tiposError" [value]="tipoError" text-wrap >{{ tipoError.etiqueta }} </ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <br>
+  <br>
+  <ion-item>
+    <ion-label position="floating">{{ 'aplicacion.inicio.reporte_modulo.comentarios' | translate }}
+    </ion-label>
+    <ion-input type="text" pattern="[A-Za-z0-9 ]{10,250}" [(ngModel)]="solicitudCambio.comentario"
+      #rateInput2="ngModel"></ion-input>
+  </ion-item>
+  <div *ngIf="rateInput2.errors && (rateInput2.dirty || rateInput2.touched)" [hidden]="!rateInput2.errors.pattern">
+    {{ 'aplicacion.inicio.reporte_modulo.error_comentario' | translate }}
+  </div>
+
+  <br>
+  <ion-button (click)="crearReporte()" icon-search type="submit" round style="width: 100%" item-end>
+    {{ 'aplicacion.inicio.reporte_modulo.enviar' | translate }}
+  </ion-button>
+
+
+</ion-content>

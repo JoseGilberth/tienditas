@@ -1,0 +1,39 @@
+.welcome-card ion-img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+#map {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+#busqueda {
+  position: relative;
+  top: 8%;
+  width: 80%;
+  margin: 0 auto;
+  z-index: 999;
+  border-radius: 30px;
+}
+
+#mostrar_mas {
+  text-align: right;
+  margin-top: 15px; 
+  width: 45%; 
+  float: right; 
+  color: #001c3a;
+  font-size: 15px;
+  font-weight: 1500;
+}
+
+#buscar {
+  position: relative;
+  top: 9%;
+  width: 80%;
+  margin: 0 auto;
+  z-index: 999;
+  border-radius: 30px;
+  background: transparent;
+}

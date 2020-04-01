@@ -1,0 +1,26 @@
+<ion-content>
+
+  <div id="map">
+
+    <ion-item id="busqueda">
+      <ion-input [(ngModel)]="buscarNegocioPorLatLngDTO.busqueda" type="search"
+        placeholder=" {{ 'aplicacion.inicio.titulo_busqueda' | translate }}" (ionFocus)="navToBuscarManual()">
+      </ion-input>
+      <ion-icon item-end name="search" (click)="buscarNegocios(0)"></ion-icon>
+    </ion-item>
+
+    <div id="buscar" *ngIf="buscarNegocioPorLatLngDTO.busqueda != ''"> 
+      <ion-button icon-search (click)="buscarNegocios(0)" type="submit" style="width: 45%" round item-end  [disabled]="buscarNegocioPorLatLngDTO.busqueda == ''">{{ 'aplicacion.inicio.boton_busqueda' | translate }}</ion-button>
+      <ion-label id="mostrar_mas" (click)="mostrarMas()">{{ 'aplicacion.inicio.mostrar_mas' | translate }}</ion-label>
+    </div>
+
+    <!-- fab placed in the center of the content with a list on each side -->
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button (click)="obtenerUbicacion()">
+        <ion-icon name="{{ iconGPS }}"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+  </div>
+
+</ion-content>

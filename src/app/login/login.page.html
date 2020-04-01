@@ -1,0 +1,67 @@
+<ion-content>
+
+  <div class="form-structor">
+
+    <!-- REGISTRO -->
+    <div class="signup">
+      <h2 class="form-title" #signup (click)="signupBtns($event)">
+      <span>{{ 'aplicacion.login.o' | translate }}</span>{{ 'aplicacion.login.registrate' | translate }}</h2>
+      
+      <form [formGroup]="registroForm" novalidate> 
+        <div class="form-group">
+          <div class="form-holder">
+            <!-- CORREO -->
+            <input formControlName="correo" type="email" [(ngModel)]="registro.correo" class="input" placeholder="{{ 'aplicacion.login.correo' | translate }}" required />
+            <div *ngIf="registroForm.controls['correo'].invalid && (registroForm.controls['correo'].dirty || registroForm.controls['correo'].touched)">
+              <div class="form-error" *ngIf="registroForm.controls['correo'].errors.required">{{ 'aplicacion.login.requeridos.correo' | translate }}</div>
+            </div> 
+            <!-- USUARIO -->
+            <input formControlName="usuario" type="text" [(ngModel)]="registro.username" class="input" placeholder="{{ 'aplicacion.login.usuario_registro' | translate }}" required />
+            <div *ngIf="registroForm.controls['usuario'].invalid && (registroForm.controls['usuario'].dirty || registroForm.controls['usuario'].touched)">
+              <div class="form-error" *ngIf="registroForm.controls['usuario'].errors.required">{{ 'aplicacion.login.requeridos.usuario' | translate }} </div>
+            </div>     
+            <!-- PASSWORD -->      
+            <input formControlName="password" type="password" [(ngModel)]="registro.password" class="input" placeholder="{{ 'aplicacion.login.password_registro' | translate }}" required />
+            <div *ngIf="registroForm.controls['password'].invalid && (registroForm.controls['password'].dirty || registroForm.controls['password'].touched)">
+              <div class="form-error" *ngIf="registroForm.controls['password'].errors.required"> {{ 'aplicacion.login.requeridos.password' | translate }} </div>
+            </div> 
+            <!-- REPETIR PASSWORD -->
+            <input formControlName="repetirPassword" type="password" [(ngModel)]="registro.repetirPassword" class="input" placeholder="{{ 'aplicacion.login.repetir_password' | translate }}" required />
+            <div *ngIf="registroForm.controls['repetirPassword'].invalid && (registroForm.controls['repetirPassword'].dirty || registroForm.controls['repetirPassword'].touched)">
+              <div class="form-error" *ngIf="registroForm.controls['repetirPassword'].errors.required">{{ 'aplicacion.login.requeridos.repetir_password' | translate }}</div>
+            </div> 
+          </div>
+        </div>
+        <button [ngClass]="registroForm.invalid ? 'submit-btn' : 'submit-btn-valid'" (click)="registrarme()">{{ 'aplicacion.login.registrarme' | translate }}</button>
+      </form>
+    </div>
+
+    <!-- INICIA SESION -->
+    <div class="login slide-up">
+      <div class="center">
+        <h2 class="form-title" #loginID (click)="loginBtns($event)">
+          <span>{{ 'aplicacion.login.o' | translate }}</span>{{ 'aplicacion.login.inicia_sesion' | translate }}</h2>
+          <form [formGroup]="loginForm" novalidate>
+            <div class="form-group">
+              <div class="form-holder">
+                <!-- USUARIO -->
+                <input formControlName="usuario" type="text" [(ngModel)]="login.username" class="input" placeholder="{{ 'aplicacion.login.usuario' | translate }}" required />
+                <div *ngIf="loginForm.controls['usuario'].invalid && (loginForm.controls['usuario'].dirty || loginForm.controls['usuario'].touched)">
+                  <div class="form-error" *ngIf="loginForm.controls['usuario'].errors.required">{{ 'aplicacion.login.requeridos.usuario' | translate }}</div>
+                </div>      
+                <!-- PASSWORD -->
+                <input formControlName="password" type="password" [(ngModel)]="login.password" class="input" placeholder="{{ 'aplicacion.login.password' | translate }}" required />
+                <div *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)">
+                  <div class="form-error" *ngIf="loginForm.controls['password'].errors.required">{{ 'aplicacion.login.requeridos.password' | translate }}</div>
+                </div>    
+              </div>    
+              <div (click)="olvidoPassword()"  style="float: right;"> <h6  >Olvide mi contraseña</h6> </div> 
+              <button [ngClass]="loginForm.invalid ? 'submit-btn' : 'submit-btn-valid'" (click)="iniciarSesion()">{{ 'aplicacion.login.iniciar_sesion' | translate }}</button>
+            </div>
+          </form> 
+      </div> 
+    </div>
+  
+</div>
+
+</ion-content>

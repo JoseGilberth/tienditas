@@ -1,0 +1,51 @@
+-- GEOLOCATION 
+ionic cordova plugin add cordova-plugin-geolocation --variable GEOLOCATION_USAGE_DESCRIPTION="La aplicación necesita saber tu localización"
+npm install --save @ionic-native/geolocation@4
+
+-- DIAGNOSTIC
+ionic cordova plugin add cordova.plugins.diagnostic
+npm install @ionic-native/diagnostic
+
+-- NATIVE STORAGE 
+ionic cordova plugin add cordova-plugin-nativestorage
+npm install @ionic-native/native-storage
+
+-- OPEN NATIVE settings
+ionic cordova plugin add cordova-open-native-settings
+npm install @ionic-native/open-native-settings
+
+-- LEAFLET MAPS
+npm install leaflet --save
+
+-- I18N 
+// Install core library
+npm install --save @ngx-translate/core
+// Install http loader
+npm install @ngx-translate/http-loader --save
+
+-- SEGURIDAD OAUTH 
+ npm install @auth0/angular-jwt --save
+
+-- PUBLICIDAD
+ionic cordova plugin add cordova-plugin-admob-free --variable ADMOB_APP_ID="ca-app-pub-3940256099942544/6300978111"  --save 
+npm install @ionic-native/admob-free --save 
+
+
+
+keytool -genkey -v -keystore pasionprogramada.keystore -alias pasionprogramada -keyalg RSA -keysize 2048 -validity 10000
+G1lb3rt0.
+Jose Gilberto Colin Velasco
+Desarrollo
+Pasion Programada
+Mexico
+Nezahualcoyotl
+MX
+G1lb3rt0.
+
+---  CASA 
+keytool -list -rfc -keystore "C:\Users\joseg\Documents\Personal\Proyecto Mi Tiendita\tienditas-frontend-mobile\imagenes\pasionprogramada.keystore"
+
+ionic cordova build android --prod --release
+"jarsigner" -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore "C:\Users\joseg\Documents\Personal\Proyecto Mi Tiendita\tienditas-frontend-mobile\imagenes\pasionprogramada.keystore" "C:\Users\joseg\Documents\Personal\Proyecto Mi Tiendita\tienditas-frontend-mobile\platforms\android\app\build\outputs\apk\release\app-release-unsigned.apk" pasionprogramada -storepass G1lb3rt0. -keypass G1lb3rt0.
+"C:\Users\joseg\AppData\Local\Android\Sdk\build-tools\29.0.1\zipalign" -v 4 "C:\Users\joseg\Documents\Personal\Proyecto Mi Tiendita\tienditas-frontend-mobile\platforms\android\app\build\outputs\apk\release\app-release-unsigned.apk" "C:\Users\joseg\Desktop\Tienditas.apk"
+
